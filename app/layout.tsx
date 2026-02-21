@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner"
 import AuthWrapper from '@/components/wrapper/auth-wrapper'
 import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -61,6 +62,12 @@ export default function RootLayout({
               <Toaster />
             </ThemeProvider>
           </Provider>
+          <Script
+            defer
+            src="https://umami-nine-livid.vercel.app/script.js"
+            data-website-id="8cabe5cc-2ed1-4ee4-bc5c-6928512c7433"
+            strategy="afterInteractive"
+          />
         </body>
       </html>
     </AuthWrapper>
